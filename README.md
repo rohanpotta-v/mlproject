@@ -26,3 +26,6 @@ Steps:
     j) logger.py this is used to store the logs -> This is used to log each and every step into a file 
     k) excpetion.py this is used for the exception handling
     l) utils.py this is there is any repetitive code which needs to be used or shared around the entire program -> This is made as and when it is required and needed
+
+3- Project
+Title -> Student Performace Indicator
