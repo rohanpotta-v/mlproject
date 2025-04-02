@@ -1,0 +1,3 @@
+pandas
+-e . 
+#This is done to connect requirements.txt to the setup.py file
