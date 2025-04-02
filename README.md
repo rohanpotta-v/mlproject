@@ -12,4 +12,17 @@ Steps:
     b) project structure (setup.py) -> This is used to place the machine learning code as a package
     c) requirements.txt -> adding the -e . to requirements this allows us to setup the setup.py file as well , and both will run with the command=>
             pip intall -r requirements.txt
-2 - 
+
+2 - Project Strucutre
+    a) src foldent 
+    b) __init__.py so that setup.py file can module/package it
+        c) create a folder inside the src called component and this has the files regarding the "data-ingestion" or the "databases" and so on
+        d) This should also have the __init__.py so that they can be moduled up/packaed
+        e) You can have data_transforamtion , model_trainer
+    f) We create another folder called "pipeline" and we usually have two pipelines
+        g) train_pipline.py this is used to train the model and trigger all the files in the components folder
+        h) predict_pipeline.py this is used to make predictions
+        i) this should also have the __init__.py file as well
+    j) logger.py this is used to store the logs -> This is used to log each and every step into a file 
+    k) excpetion.py this is used for the exception handling
+    l) utils.py this is there is any repetitive code which needs to be used or shared around the entire program -> This is made as and when it is required and needed
