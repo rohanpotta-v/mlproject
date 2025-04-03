@@ -10,6 +10,8 @@ from dataclasses import dataclass
 from src.components.data_transformation import DataTransformation
 from src.components.data_transformation import DataTranformationConfig
 
+from src.components.model_trainer import ModelTrainer
+from src.components.model_trainer import ModelTrainerConfig
 
 
 @dataclass #this is a decorator
@@ -56,10 +58,15 @@ class DataIngestion:
 if __name__=="__main__":
     obj=DataIngestion()
     # obj.initiate_data_ingestion() #This is to test the data_ingestion
-
     #This is merging the data_ingestion and data_transformation
 
 
     train_data,test_data=obj.initiate_data_ingestion()
     data_transformation=DataTransformation()
     data_transformation.initiate_data_transformation(train_data,test_data)
+
+    #The following lines are added to integrate it with the model_trainer.py file 
+    train_arr,test_arr,_=data_transformation.initiate_data_transformation(train_data,test_data)
+
+    modeltrainer=ModelTrainer()
+    print(modeltrainer.initiate_model_trainer(train_arr,test_arr))
