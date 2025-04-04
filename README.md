@@ -39,3 +39,5 @@ The objective is to perform data preprocessing and like converting categorical f
 6 - Model Trainer
 The objective here is to train different different models as see which have good score. The point is that we try every model because we dont know which one will perform better and then we can further refine it perform the hyper-parameter tuning.
 
+7 - Creating a Prediction Pipline
+The objective is to create an api to talk to the model build a html page to get the inputs and then make a predictive result of the maths result.
