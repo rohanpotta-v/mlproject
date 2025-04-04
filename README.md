@@ -57,3 +57,8 @@ The objective is to create an api to talk to the model build a html page to get 
     b) Deployment with ec2 instance and ECR
         in the workflows there is a pipeline build , where we create a docker image and then load it in ECR and then to EC2
         in the Ec2 we can set it up as a runner so that we can run our workflow pipeline on the ec2
+
+    c) Deployment with azure:
+        build a docker image and push it to Contianer Registry and then link it to azure web app for easy deployment.
+        f
+             
