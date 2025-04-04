@@ -42,3 +42,8 @@ The objective here is to train different different models as see which have good
 7 - Creating a Prediction Pipline
 The objective is to create an api to talk to the model build a html page to get the inputs and then make a predictive result of the maths result.
 
+8 - Deployment Techniques
+    a) AWS Elastic Beanstalk -> we create a .ebextensions , and then inside that  , we have a python.config file which tells beanstalk what the entry point of the application is 
+    option_settings:
+            "aws:elasticbeanstalk:container:python":
+            WSGIPath: application:application  #Here we mention the file name and it must be application.py (so we make a copy of app.py as application.py)
